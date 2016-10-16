@@ -1,5 +1,7 @@
+
 (function() {
-    
+            
+            
 			var
 				// Obtain a reference to the canvas element
 				// using its id.
@@ -28,16 +30,21 @@
 			// resizes along with the browser window.					
 			function redraw() {
                 
+                var widthIndent = window.innerWidth * 2 / 10;
+                var columnWidth = window.innerWidth * 6 / 70;
+                
+                var heightIndent = window.innerHeight / 10;
+                var height = window.innerHeight * 1.5;
+               
+                
+                
 				context.strokeStyle = 'white';
 				context.lineWidth = '1';
                 
                 context.fillStyle = "#2E5DDF";
                 
-                // outer square
-				context.fillRect(window.innerWidth / 9 , window.innerHeight / 9 , window.innerWidth * 7 / 9, window.innerHeight * 7 / 9);
-                
-                // inner square
-                context.strokeRect(window.innerWidth / 9 , window.innerHeight / 9 , window.innerWidth * 7 / 9, window.innerHeight / 6);
+                // top square
+				context.fillRect(widthIndent, heightIndent , columnWidth * 7 , heightIndent);
                 
                 var fontsize = window.innerHeight / 20;
                 var fontsizeString = fontsize.toString();
@@ -45,41 +52,59 @@
                 
                 context.fillStyle = "#FFFFFF";
                 
-                context.fillText("S", window.innerWidth / 9 + window.innerWidth * 1 / 18 - fontsize, window.innerHeight / 4);
-                context.fillText("M", window.innerWidth / 9 + window.innerWidth * 3 / 18 - fontsize, window.innerHeight / 4);
-                context.fillText("T", window.innerWidth / 9 + window.innerWidth * 5 / 18 - fontsize, window.innerHeight / 4);
-                context.fillText("W", window.innerWidth / 9 + window.innerWidth * 7 / 18 - fontsize, window.innerHeight / 4);
-                context.fillText("T", window.innerWidth / 9 + window.innerWidth * 9 / 18 - fontsize, window.innerHeight / 4);
-                context.fillText("F", window.innerWidth / 9 + window.innerWidth * 11 / 18 - fontsize, window.innerHeight / 4);
-                context.fillText("S", window.innerWidth / 9 + window.innerWidth * 13 / 18 - fontsize, window.innerHeight / 4);
+                context.fillText("S", widthIndent + columnWidth / 3, heightIndent * 1.75);
+                context.fillText("M", widthIndent + 4 * columnWidth / 3, heightIndent * 1.75);
+                context.fillText("T", widthIndent + 7 * columnWidth / 3, heightIndent * 1.75);
+                context.fillText("W", widthIndent + 10 * columnWidth / 3, heightIndent * 1.75);
+                context.fillText("T", widthIndent + 13 * columnWidth / 3, heightIndent * 1.75);
+                context.fillText("F", widthIndent + 16 * columnWidth / 3, heightIndent * 1.75);
+                context.fillText("S", widthIndent + 19 * columnWidth / 3, heightIndent * 1.75);
+                
+                fontsize = window.innerHeight / 40;
+                var fontsizeString = fontsize.toString();
+                context.font = fontsizeString.concat("px Comic Sans");
+                
+                context.fillText("8:00", window.innerWidth / 9 , window.innerHeight / 2);
+            
+                
+            
+                
+                
                 
                 context.fillStyle = "#DBDBDB";
                 
-                context.fillRect(window.innerWidth / 9, window.innerHeight / 9 + window.innerHeight / 6, innerWidth / 9, innerHeight - innerHeight / 6 - innerHeight * 2 / 9);
+                context.fillRect(widthIndent,  2 * heightIndent, columnWidth, height / 2);
                 
                 context.fillStyle = "#FFFFFF";
                 
-                context.fillRect(window.innerWidth * 2 / 9, window.innerHeight / 9 + window.innerHeight / 6, innerWidth / 9, innerHeight - innerHeight / 6 - innerHeight * 2 / 9);
+                context.fillRect(widthIndent + columnWidth, 2 * heightIndent, columnWidth, height / 2);
                 
                 context.fillStyle = "#DBDBDB";
                 
-                context.fillRect(window.innerWidth * 3 / 9, window.innerHeight / 9 + window.innerHeight / 6, innerWidth / 9, innerHeight - innerHeight / 6 - innerHeight * 2 / 9);
+                context.fillRect(widthIndent + 2 * columnWidth, 2 * heightIndent, columnWidth, height / 2);
                 
                 context.fillStyle = "#FFFFFF";
                 
-                context.fillRect(window.innerWidth * 4 / 9, window.innerHeight / 9 + window.innerHeight / 6, innerWidth / 9, innerHeight - innerHeight / 6 - innerHeight * 2 / 9);
+                context.fillRect(widthIndent + 3 * columnWidth, 2 * heightIndent, columnWidth, height / 2);
                 
                 context.fillStyle = "#DBDBDB";
                 
-                context.fillRect(window.innerWidth * 5 / 9, window.innerHeight / 9 + window.innerHeight / 6, innerWidth / 9, innerHeight - innerHeight / 6 - innerHeight * 2 / 9);
+                context.fillRect(widthIndent + 4 * columnWidth, 2 * heightIndent, columnWidth, height / 2);
                 
                 context.fillStyle = "#FFFFFF";
                 
-                context.fillRect(window.innerWidth * 6 / 9, window.innerHeight / 9 + window.innerHeight / 6, innerWidth / 9, innerHeight - innerHeight / 6 - innerHeight * 2 / 9);
+                context.fillRect(widthIndent + 5 * columnWidth, 2 * heightIndent, columnWidth, height / 2);
                 
                 context.fillStyle = "#DBDBDB";
                 
-                context.fillRect(window.innerWidth * 7 / 9, window.innerHeight / 9 + window.innerHeight / 6, innerWidth / 9, innerHeight - innerHeight / 6 - innerHeight * 2 / 9);
+                context.fillRect(widthIndent + 6 * columnWidth, 2 * heightIndent, columnWidth, height / 2);
+                context.fillStyle = "#FFFFFF";
+                
+                context.fillText("8:00", widthIndent + columnWidth / 8, 2 * heightIndent + height / 20 );
+                context.fillText("9:00", widthIndent + columnWidth / 8, 3 * heightIndent + height / 20 );
+                context.fillText("10:00", widthIndent + columnWidth / 8, 4 * heightIndent + height / 20 );
+                context.fillText("11:00", widthIndent + columnWidth / 8, 5 * heightIndent + height / 20 );
+                context.fillText("12:00", widthIndent + columnWidth / 8, 6 * heightIndent + height / 20 );
                
 			}
 		
@@ -92,25 +117,46 @@
 				redraw();
 			}
     
-        
             
-            // create an event with (string name, int start, int end)
-            function events(name, start, end) {
-                this.name = name;
-                this.start = start;
-                this.end = end;
+            function event() {
+                this.name;
+                this.start;
+                this.end;
+                this.color;
+                this.days;
             }
-    
-            // create a calender with (string name, RGB color)
-            function calender(name, color) {
-                this.name = name;
-                this.color = color;
+ 
+            function createEvent(event) {
                 
-            }
+                var startHour = parseInt(event.start.substring(0,2), 10);
+                var startMin = parseInt(event.start.substring(2,4), 10);
+                var endHour = parseInt(event.end.substring(0,2), 10);
+                var endMin = parseInt(event.end.substring(2,4), 10);
+               
+                if (startHour > endHour) {
+                    if (startMin >= endMin) {
+                        var totalMins = (((24 - startHour) + endHour) * 60) - ((60 - startMin) + endMin);
+                    }
+                    else 
+                        var totalMins = (((24 - startHour) + endHour) * 60) + (endMin - startMin);
+                }
+                
+                
+                else 
+                    if (startMin >= endMin) {
+                        var totalMins = ((endHour - startHour) + (60 - startMin) + endMin);
+                    }
+                    else
+                        var totalMins = ((endHour - startHour) + (endMin - startMin));
+        
+                }
+                
+                context.fillStyle = event.color;
+                
+            
+
+            
     
-            // Changes XML to JSON
-            function parseJSON(json) {   
-	           
-            }
-	      
+    
+          
 		})();
