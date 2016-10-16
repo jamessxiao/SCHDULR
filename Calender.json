@@ -1,0 +1,61 @@
+
+<calender>
+    <title>My Calender</title>
+    <color>#6666FF</color>
+    <events>
+        <event>
+            <name>Watch Anime</name>
+            <event-color>#3d3d99</event-color>
+            <start-time>0600</start-time>
+            <end-time>1800</end-time>
+            <days>
+                <day>Monday</day>
+                <day>Tuesday</day>
+                <day>Friday></day>
+            </days>
+        </event>
+        <event>
+            <name>Hang Out With James</name>
+            <event-color>#9e9ecc</event-color>
+            <start-time>1800</start-time>
+            <end-time>2000</end-time>
+            <days>
+                <day>Tuesday</day>
+                <day>Saturday</day>
+            </days>
+        </event>
+    </events>
+</calender>
+
+{
+    "calender": {
+        "title": "My Calender", 
+        "color": "#666FF",
+        "events": {
+            "event": {
+                "name": "Watch Anime",
+                "event-color": "#3d3d99",
+                "start-time": "0600",
+                "end-time": "1800",
+                "days": {
+                    "day": "Monday",
+                    "day": "Tuesday",
+                    "day": "Wednesday"
+                }
+            },
+            "event": {
+                "name": "Hang Out With James",
+                "event-color": "#9e9ecc" ,
+                "start-time": "1800",
+                "end-time": "2000",
+                "days": {
+                    "day": "Tuesday",
+                    "day": "Saturday"
+                }
+            }
+        }
+    }
+}
+        
+
+    
