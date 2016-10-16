@@ -63,12 +63,7 @@
                 fontsize = window.innerHeight / 40;
                 var fontsizeString = fontsize.toString();
                 context.font = fontsizeString.concat("px Comic Sans");
-                
-                context.fillText("8:00", window.innerWidth / 9 , window.innerHeight / 2);
-            
-                
-            
-                
+
                 
                 
                 context.fillStyle = "#DBDBDB";
@@ -116,15 +111,18 @@
 				htmlCanvas.height = window.innerHeight;
 				redraw();
 			}
+ 
+            var event = Class({
+                initialize: function(name, startTime, endTime, color, days) {
+                    this.name = name;
+                    this.start = startTime;
+                    this.end = endTime;
+                    this.color = color;
+                    this.days = days;
+                }
+ });
     
-            
-            function event() {
-                this.name;
-                this.start;
-                this.end;
-                this.color;
-                this.days;
-            }
+ /*   
  
             function createEvent(event) {
                 
@@ -152,10 +150,35 @@
                 }
                 
                 context.fillStyle = event.color;
+    
+    
+                var widthIndent = window.innerWidth * 2 / 10;
+                var columnWidth = window.innerWidth * 6 / 70;
                 
-            
+                var heightIndent = window.innerHeight / 10;
+                var height = window.innerHeight * 1.5;
+                
+                for (var i = 0; i < event.days.length; i++) {
+                    switch (event.day[i]) {
+                        case "Sunday":
+                            context.fillRect(widthIndent, 2 * heightIndent + startHour *  )
+                        case "Monday":
+                           
+                        case "Tuesday":
+                            
+                        case "Wednesday":
+                            
+                        case "Thursday":
+                           
+                        case "Friday":
+                            
+                        case "Saturday":
+                            
+                    }
+                }
 
-            
+
+*/
     
     
           
